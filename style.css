@@ -1,0 +1,123 @@
+html {
+  background-color: #eee;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* START MODULE STYLING */
+.module-gallery {
+  width: 100%;
+}
+.module-gallery .slider-wrapper {
+  display: flex;
+  overflow: hidden;
+  max-height: 500px;
+}
+.module-gallery .slider-thumb {
+  max-width: 125px;
+}
+.module-gallery .slider-thumb li {
+  max-height: 100px;
+}
+.module-gallery .slider-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.module-gallery .slider-thumb .slick-prev,
+.module-gallery .slider-thumb .slick-next {
+  z-index: 1;
+  height: 1em;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.3;
+  transition: opacity 300ms ease;
+  font-size: 1.5em;
+  color: #fff;
+}
+.module-gallery .slider-thumb .slick-prev:before,
+.module-gallery .slider-thumb .slick-next:before {
+  content: "";
+}
+.module-gallery .slider-thumb .slick-prev:hover,
+.module-gallery .slider-thumb .slick-next:hover {
+  opacity: 0.5;
+}
+.module-gallery .slider-thumb .slick-prev {
+  left: unset;
+  top: 0.5em;
+}
+.module-gallery .slider-thumb .slick-next {
+  top: unset;
+  right: unset;
+  bottom: -0.5em;
+}
+
+.slick-track .slick-track {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .module-gallery .slider-wrapper {
+    flex-direction: column-reverse;
+  }
+  .module-gallery .slider-thumb {
+    max-width: 100%;
+  }
+
+  .module-gallery .slider-thumb .slick-prev,
+  .module-gallery .slider-thumb .slick-next {
+    top: 50%;
+    width: 1em;
+    height: 100%;
+  }
+  .module-gallery .slider-thumb .slick-prev {
+    left: 0;
+  }
+  .module-gallery .slider-thumb .slick-prev .fa:before {
+    content: "\f104";
+  }
+  .module-gallery .slider-thumb .slick-next {
+    right: 0;
+  }
+  .module-gallery .slider-thumb .slick-next .fa:before {
+    content: "\f105";
+  }
+}
+
+.module-gallery .slider-thumb li {
+  max-width: 200px;
+}
+
+.module-gallery .slider-thumb {
+  /* max-width: 125px; */
+  width: 200px;
+  height: 100px;
+}
+
+.module-gallery {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: flex-start;
+}
+
+.slider-thumb > li {
+  height: 350px;
+  width: 350px;
+  padding: 23px;
+}
+
+.slider-preview {
+  margin-left: 70px;
+}
+
+.slider-preview > li > img {
+  width: 500px;
+}
