@@ -1,7 +1,14 @@
-$(function () {
+// $(function () {
+$(document).ready(function () {
+  $(".slider-thumb").on("click", function () {
+    $(".nav").toggleClass("showing");
+    $(".nav ui").toggleClass("showing");
+  });
+
   $(".slider-thumb").slick({
     autoplay: false,
     vertical: true,
+    dots: false,
     infinite: true,
     verticalSwiping: true,
     slidesPerRow: 3,
@@ -24,15 +31,15 @@ $(function () {
         settings: {
           vertical: false,
           slidesPerRow: 3,
-          slidesToShow: 1,
+          slidesToShow: 3,
         },
       },
     ],
   });
   $(".slider-preview").slick({
-    autoplay: true,
+    autoplay: false,
     vertical: true,
-    infinite: true,
+    infinite: false,
     slidesPerRow: 1,
     slidesToShow: 1,
     asNavFor: ".slider-thumb",
