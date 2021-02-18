@@ -125,24 +125,25 @@ li::marker {
   color: #eee;
 }
 
-/* style.css | http://127.0.0.1:5500/style.css */
-
 .module-gallery .slider-wrapper {
   flex-direction: row;
   margin-top: 100px;
 }
 
-/* Елемент | http://127.0.0.1:5500/index.html */
-
 .preview-image img {
   height: 370px;
-  width: 550px;
-  object-fit: cover;
+  width: 500px;
+  /* object-fit: cover; */
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.slider-preview {
   overflow: hidden;
 }
-
-/* Елемент | http://127.0.0.1:5500/index.html */
-
-li.preview-image:nth-child(1) {
-  /* width: 550px; */
+.module-gallery .slider-thumb li {
+  margin: 20px 0;
 }
+
+
+
