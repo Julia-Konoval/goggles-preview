@@ -1,6 +1,6 @@
 // $(function () {
 $(document).ready(function () {
-  $(".slider-thumb").on("click", function () {
+  $(".menu-toggle").on("click", function () {
     $(".nav").toggleClass("showing");
     $(".nav ui").toggleClass("showing");
   });
@@ -31,7 +31,7 @@ $(document).ready(function () {
         settings: {
           vertical: false,
           slidesPerRow: 3,
-          slidesToShow: 3,
+          slidesToShow: 1,
         },
       },
     ],
@@ -40,7 +40,7 @@ $(document).ready(function () {
     autoplay: false,
     vertical: true,
     infinite: false,
-    slidesPerRow: 1,
+    slidesPerRow: 3,
     slidesToShow: 1,
     asNavFor: ".slider-thumb",
     arrows: false,
