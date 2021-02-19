@@ -11,9 +11,7 @@ body {
 }
 
 /* START MODULE STYLING */
-.module-gallery {
-  width: 100%;
-}
+
 .module-gallery .slider-wrapper {
   display: flex;
   overflow: hidden;
@@ -116,7 +114,7 @@ body {
 .module-gallery {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 52%;
   align-items: flex-start;
 }
 
@@ -178,4 +176,25 @@ li::marker {
 }
 .description p {
   margin-top: 5px;
+}
+
+/* Options overview */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: flex-start;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.thumb-options img {
+  height: 50px;
+  width: 80px;
 }
