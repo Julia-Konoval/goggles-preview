@@ -178,14 +178,14 @@ button {
   outline: none;
 }
 
-#addToCart-btn {
+.addToCart-btn {
   -webkit-box-shadow: 10px 11px 1px -3px rgb(1, 255, 170);
   box-shadow: 10px 11px 1px -3px rgb(1, 255, 170);
   background-color: #000000;
   color: rgb(1, 255, 170);
 }
 
-#prescription-btn {
+.prescription-btn {
   margin-top: 15px;
   margin-bottom: 15px;
   -webkit-box-shadow: 10px 11px 1px -3px #000000;

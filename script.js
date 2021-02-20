@@ -1,4 +1,3 @@
-// $(function () {
 $(document).ready(function () {
   $(".menu-toggle").on("click", function () {
     $(".nav").toggleClass("showing");
@@ -59,13 +58,21 @@ $(document).ready(function () {
 const allFrontGlasses = document.querySelectorAll(".glasses-front");
 const allSideGlasses1 = document.querySelectorAll(".glasses-side1");
 const allSideGlasses2 = document.querySelectorAll(".glasses-side2");
-// const allGlasses = document.querySelectorAll(".glasses");
 const orangeGlasses = document.querySelectorAll(".orange-glasses");
 const purpleGlasses = document.querySelectorAll(".purple-glasses");
 const greenGlasses = document.querySelectorAll(".green-glasses");
+const addToCard = document.querySelector(".addToCart-btn");
+const buildPrescription = document.querySelector(".prescription-btn");
+
+let currentVariant = "purple";
+let variantQuantity = 0;
 
 orangeGlasses.forEach((glasses) =>
   glasses.addEventListener("click", () => {
+    if (currentVariant !== "orange") {
+      variantQuantity = 0;
+    }
+    currentVariant = "orange";
     allFrontGlasses.forEach(
       (frontGlasses) => (frontGlasses.src = "./images/reks-orange1.png")
     );
@@ -80,6 +87,11 @@ orangeGlasses.forEach((glasses) =>
 
 purpleGlasses.forEach((glasses) =>
   glasses.addEventListener("click", () => {
+    if (currentVariant !== "purple") {
+      variantQuantity = 0;
+    }
+    currentVariant = "purple";
+
     allFrontGlasses.forEach(
       (frontGlasses) => (frontGlasses.src = "./images/reks-purple1.png")
     );
@@ -93,6 +105,10 @@ purpleGlasses.forEach((glasses) =>
 );
 greenGlasses.forEach((glasses) =>
   glasses.addEventListener("click", () => {
+    if (currentVariant !== "green") {
+      variantQuantity = 0;
+    }
+    currentVariant = "green";
     allFrontGlasses.forEach(
       (frontGlasses) => (frontGlasses.src = "./images/reks-green1.png")
     );
@@ -104,3 +120,19 @@ greenGlasses.forEach((glasses) =>
     );
   })
 );
+addToCard.addEventListener("click", () => {
+  variantQuantity++;
+});
+buildPrescription.addEventListener("click", () => {
+  axios
+    .post("https://jsonplaceholder.typicode.com/posts", {
+      variant: currentVariant,
+      quantity: variantQuantity,
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
