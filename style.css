@@ -52,7 +52,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 56%;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-start;
 }
 .module-gallery .slider-thumb {
   margin-top: -1.7em;
@@ -74,9 +75,9 @@ li::marker {
 
 .preview-image img {
   overflow: hidden;
+  margin-left: 0;
   margin-bottom: 70px;
   outline: none;
-  margin-left: 20px;
   height: 500px;
   width: 550px;
   object-fit: fill;
@@ -177,14 +178,14 @@ button {
   outline: none;
 }
 
-#black-btn {
+#addToCart-btn {
   -webkit-box-shadow: 10px 11px 1px -3px rgb(1, 255, 170);
   box-shadow: 10px 11px 1px -3px rgb(1, 255, 170);
   background-color: #000000;
   color: rgb(1, 255, 170);
 }
 
-#azure-btn {
+#prescription-btn {
   margin-top: 15px;
   margin-bottom: 15px;
   -webkit-box-shadow: 10px 11px 1px -3px #000000;
@@ -193,14 +194,19 @@ button {
   color: #000000;
 }
 
-@media screen and (min-device-width: 960px) and (max-device-width: 1200px) {
+/* Media queries */
+@media screen and (max-width: 1400px) {
+  .preview-image img {
+    width: 450px;
+    height: 450px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1200px) {
   .preview-image img {
     height: 350px;
     width: 350px;
-    margin-left: 0;
-    margin-bottom: 170px;
+    margin-bottom: 80px;
     overflow: hidden;
-    margin-top: -1.7em;
   }
 
   .description {
@@ -209,7 +215,8 @@ button {
     height: auto;
   }
   .module-gallery .slider-wrapper {
-    margin-top: 0;
+    margin-top: 1em;
+    margin-left: 1em;
   }
 
   .module-gallery .slider-thumb li {
@@ -250,5 +257,15 @@ button {
 @media screen and (max-width: 780px) {
   .module-gallery {
     display: none;
+  }
+  .form{
+    font-size: 10px;
+  }
+  .form h1{
+    font-size: 20px;
+  }
+  .info {
+    width: 320px;
+    height: 40px;
   }
 }
