@@ -179,19 +179,20 @@ button {
 }
 
 .addToCart-btn {
-  -webkit-box-shadow: 10px 11px 1px -3px rgb(1, 255, 170);
-  box-shadow: 10px 11px 1px -3px rgb(1, 255, 170);
-  background-color: #000000;
-  color: rgb(1, 255, 170);
-}
-
-.prescription-btn {
   margin-top: 15px;
   margin-bottom: 15px;
   -webkit-box-shadow: 10px 11px 1px -3px #000000;
   box-shadow: 10px 11px 1px -3px #000000;
   background-color: rgb(1, 255, 170);
   color: #000000;
+  margin-top: 30px;
+}
+
+.prescription-btn {
+  -webkit-box-shadow: 10px 11px 1px -3px rgb(1, 255, 170);
+  box-shadow: 10px 11px 1px -3px rgb(1, 255, 170);
+  background-color: #000000;
+  color: rgb(1, 255, 170);
 }
 
 /* Media queries */
@@ -258,10 +259,10 @@ button {
   .module-gallery {
     display: none;
   }
-  .form{
+  .form {
     font-size: 10px;
   }
-  .form h1{
+  .form h1 {
     font-size: 20px;
   }
   .info {
